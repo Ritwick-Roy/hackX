@@ -1,25 +1,24 @@
 package com.example.hackx.views
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.example.hackx.R
 import com.example.hackx.extensions.Extensions.toast
 import com.example.hackx.utils.FirebaseUtils.firebaseAuth
 import com.example.hackx.utils.FirebaseUtils.firebaseUser
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.activity_register.*
 
-import kotlinx.android.synthetic.main.activity_create_account.*
-
-class CreateAccountActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
     lateinit var userEmail: String
     lateinit var userPassword: String
     lateinit var createAccountInputsArray: Array<EditText>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_account)
+        setContentView(R.layout.activity_register)
         createAccountInputsArray = arrayOf(etEmail, etPassword, etConfirmPassword)
         btnCreateAccount.setOnClickListener {
             signIn()
@@ -38,7 +37,7 @@ class CreateAccountActivity : AppCompatActivity() {
         super.onStart()
         val user: FirebaseUser? = firebaseAuth.currentUser
         user?.let {
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, BossHomeActivity::class.java))
             toast("welcome back")
         }
     }
@@ -77,7 +76,7 @@ class CreateAccountActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         toast("created account successfully !")
                         sendEmailVerification()
-                        startActivity(Intent(this, HomeActivity::class.java))
+                        startActivity(Intent(this, BossHomeActivity::class.java))
                         finish()
                     } else {
                         toast("failed to Authenticate !")

@@ -20,7 +20,7 @@ class SignInActivity : AppCompatActivity() {
 
         signInInputsArray = arrayOf(etSignInEmail, etSignInPassword)
         btnCreateAccount2.setOnClickListener {
-            startActivity(Intent(this, CreateAccountActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
             finish()
         }
 
@@ -39,7 +39,7 @@ class SignInActivity : AppCompatActivity() {
             firebaseAuth.signInWithEmailAndPassword(signInEmail, signInPassword)
                 .addOnCompleteListener { signIn ->
                     if (signIn.isSuccessful) {
-                        startActivity(Intent(this, HomeActivity::class.java))
+                        startActivity(Intent(this, BossHomeActivity::class.java))
                         toast("signed in successfully")
                         finish()
                     } else {
