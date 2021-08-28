@@ -26,15 +26,18 @@ class CompleteProfileActivity : AppCompatActivity() {
             var email = i.getStringExtra("email").toString()
             database = FirebaseDatabase.getInstance().getReference("Users")
             val user = Users(email, emp, nam, age, gen, dep, tc, oh)
+            if(emp.trim().isNotEmpty() && nam.trim().isNotEmpty() && age.trim().isNotEmpty() && gen.trim().isNotEmpty() && dep.trim().isNotEmpty() && tc.trim().isNotEmpty() && oh.trim().isNotEmpty())
+            {
+                database.child(emp).setValue(user).addOnSuccessListener {
+                    Toast.makeText(this, "Successfully Saved", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, AccountActivity::class.java))
+                    finish()
 
-            database.child(emp).setValue(user).addOnSuccessListener {
-                Toast.makeText(this, "Successfully Saved", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, BossHomeActivity::class.java))
-                finish()
-
-            }.addOnFailureListener {
-                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener {
+                    Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+                }
             }
+            else Toast.makeText(this, "Fill all the fields!", Toast.LENGTH_SHORT).show()
 
         }
     }
