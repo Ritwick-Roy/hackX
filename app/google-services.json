@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "517668277886",
+    "project_id": "hackx-auth",
+    "storage_bucket": "hackx-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517668277886:android:8ed85e95cc37d5db16122f",
+        "android_client_info": {
+          "package_name": "com.example.hackx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517668277886-q91gq4v3r93hkinih5npt67o6pk6vreo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASCVR3am9DLM1GdkO7EYZkFwaxhV-8Hr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517668277886-q91gq4v3r93hkinih5npt67o6pk6vreo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
