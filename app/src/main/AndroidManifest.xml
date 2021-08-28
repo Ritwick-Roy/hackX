@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HackX">
         <activity
+            android:name=".views.CompleteProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".views.EmployeeHomeActivity"
             android:exported="true" />
         <activity

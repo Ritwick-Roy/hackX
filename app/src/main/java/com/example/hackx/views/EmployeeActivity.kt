@@ -14,10 +14,12 @@ class EmployeeActivity : AppCompatActivity() {
         val bu2: Button =findViewById(R.id.b2)
         bu1.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
+            intent.putExtra("profile","employee")
             startActivity(intent)
         }
         bu2.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
+            intent.putExtra("profile","employee")
             startActivity(intent)
         }
     }

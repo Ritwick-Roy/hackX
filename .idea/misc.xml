@@ -5,10 +5,13 @@
       <map>
         <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_account.xml" value="0.4" />
         <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_boss.xml" value="0.4" />
+        <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_boss_home.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_complete_profile.xml" value="0.264" />
         <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_create_account.xml" value="0.2" />
         <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_employee.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_employee_home.xml" value="0.20652173913043478" />
         <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_register.xml" value="0.15534420289855072" />
+        <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/Ritwick Roy/AndroidStudioProjects/hackX/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
       </map>
     </option>

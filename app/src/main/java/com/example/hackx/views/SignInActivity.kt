@@ -34,12 +34,16 @@ class SignInActivity : AppCompatActivity() {
     private fun signInUser() {
         signInEmail = etSignInEmail.text.toString().trim()
         signInPassword = etSignInPassword.text.toString().trim()
-
         if (notEmpty()) {
             firebaseAuth.signInWithEmailAndPassword(signInEmail, signInPassword)
                 .addOnCompleteListener { signIn ->
                     if (signIn.isSuccessful) {
-                        startActivity(Intent(this, BossHomeActivity::class.java))
+                        var i:Intent=getIntent()
+                        var s1=i.getStringExtra("profile").toString()
+                        if(s1=="boss")
+                            startActivity(Intent(this, BossHomeActivity::class.java))
+                        else
+                            startActivity(Intent(this, EmployeeHomeActivity::class.java))
                         toast("signed in successfully")
                         finish()
                     } else {

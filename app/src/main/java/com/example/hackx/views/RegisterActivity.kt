@@ -76,7 +76,9 @@ class RegisterActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         toast("created account successfully !")
                         sendEmailVerification()
-                        startActivity(Intent(this, BossHomeActivity::class.java))
+                        val i=Intent(this, CompleteProfileActivity::class.java)
+                        i.putExtra("email",userEmail)
+                        startActivity(i)
                         finish()
                     } else {
                         toast("failed to Authenticate !")
